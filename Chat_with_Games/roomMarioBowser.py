@@ -160,7 +160,7 @@ class Game2():
         self.lock.release()
 
     def __str__(self):
-        return f"G<{self.players[RIGHT_PLAYER]}:{self.players[LEFT_PLAYER]}:{self.running.value}>"
+        return 'Mario - Bowser Laberinth'
 
 
 def player(side, conn, game):
