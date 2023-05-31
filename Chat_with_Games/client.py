@@ -50,6 +50,7 @@ def info():
     print('7. Accept <Username> <Game>: Type "Accept" followed by the username and game ID to accept a game challenge from another player \n')
     print('8. Games: Type "Games" to see the available games \n')
     print('9. Inbox: Type "Inbox" to see the available challenges and accept or refuse them \n')
+    print('10. General Message: To send a message to the general chat just write it avoiding the commands above \n')
 
 
 
@@ -278,10 +279,11 @@ def client(server_address, client_data):
         
         inbox_process = Process(target=receive_messages, args=(player,))
         inbox_process.start()
-
+        info()
         while player.connected.value:
             if not player.in_game.value:
                 # Handle the client when not in a game
+                print('To read the commands available write info') 
                 handle_not_in_game(conn, player)
             else:
                 # Handle the client when in a game
