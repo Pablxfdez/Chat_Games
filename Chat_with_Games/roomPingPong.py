@@ -135,7 +135,7 @@ class Game1():
 
 
     def __str__(self):
-        return f"G<{self.players[RIGHT_PLAYER]}:{self.players[LEFT_PLAYER]}:{self.ball[0]}:{self.running.value}>"
+        return "Ping - Pong"
 
 def player(side, conn, game):
     try:
